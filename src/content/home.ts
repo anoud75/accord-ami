@@ -225,6 +225,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "Mirsad framed fraud prevention as a calm, informative moment in the user's journey — designed to slow risky decisions without blocking trusted ones.",
+        mainImage: mirsadCover.url,
+        downloadUrl: mirsadPdf.url,
+        downloadLabel: "Download Case Study (PDF)",
       },
     ],
   },
