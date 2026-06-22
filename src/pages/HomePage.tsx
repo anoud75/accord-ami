@@ -1,9 +1,9 @@
-import { Download, Mail, Github, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
 import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
-import WorkSection from "@/components/portfolio/WorkSection";
-import { achievements, skillsStrip, roles } from "@/content/home";
+import { achievements, fields, skillsStrip, roles } from "@/content/home";
 import portrait from "@/assets/alanoud-portrait.jpg.asset.json";
 import cv from "@/assets/cv.asset.json";
 
@@ -11,15 +11,15 @@ const HomePage = () => (
   <PageShell>
     <SEO
       title="Alanoud Alsamil — Product, Business Analysis, UX/UI & AI Strategy"
-      description="Personal portfolio of Alanoud Alsamil. Product management, business analysis, UX/UI, and AI product strategy across healthcare, AI, fintech, environment, and inclusion."
+      description="Personal portfolio of Alanoud Alsamil. Product management, business analysis, UX/UI, and AI product strategy across healthcare, fintech, environment, and accessibility."
     />
 
-    {/* 1. ABOUT / HERO */}
+    {/* 1. ABOUT */}
     <section id="about" className="pt-20 md:pt-28 pb-24 md:pb-28 scroll-mt-20">
       <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-start">
         <div className="md:col-span-7 order-2 md:order-1">
           <Reveal>
-            <Eyebrow>Product · Business Analysis · UX/UI · AI Strategy</Eyebrow>
+            <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="display-1 mt-6">Hi, I'm Alanoud.</h1>
@@ -71,18 +71,6 @@ const HomePage = () => (
               </ul>
             </div>
           </Reveal>
-
-          <Reveal delay={0.25}>
-            <div className="mt-10 max-w-2xl">
-              <p className="eyebrow mb-3">How I Work</p>
-              <p className="text-foreground/80 leading-relaxed">
-                I do not jump straight into screens. I start by understanding what is actually happening,
-                who needs what, where the workflow breaks, and what needs to be true for the product to
-                work. Then I turn that into scope, flows, requirements, logic, screens, and documents
-                that help teams build with confidence.
-              </p>
-            </div>
-          </Reveal>
         </div>
 
         <div className="md:col-span-5 order-1 md:order-2">
@@ -99,8 +87,41 @@ const HomePage = () => (
       </div>
     </section>
 
-    {/* 2. WORK */}
-    <WorkSection />
+    {/* 2. EXPLORE MY WORK */}
+    <section id="work" className="border-t border-foreground/10 scroll-mt-20">
+      <div className="container-edit py-20 md:py-24">
+        <Reveal>
+          <Eyebrow>Explore My Work</Eyebrow>
+          <h2 className="display-2 mt-4 max-w-3xl">Explore My Work.</h2>
+          <p className="lede max-w-3xl mt-6">
+            Choose an area to see the products, strategies, and experiences I have worked on.
+          </p>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-5 mt-12">
+          {fields.map((f, i) => (
+            <Reveal key={f.slug} delay={Math.min(i, 3) * 0.05}>
+              <Link
+                to={`/work/${f.slug}`}
+                className="group block h-full bg-ivory border border-foreground/15 rounded-md p-8 md:p-10 hover:border-foreground/50 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <p className="eyebrow">{f.projects.length} projects</p>
+                  <ArrowUpRight className="w-5 h-5 text-foreground/40 group-hover:text-foreground transition" />
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl tracking-tight leading-snug mt-6">
+                  {f.title}
+                </h3>
+                <p className="mt-4 text-foreground/70 leading-relaxed">{f.hero}</p>
+                <p className="mt-6 text-sm font-medium text-foreground inline-flex items-center gap-1.5">
+                  Explore {f.title.split(" ")[0]} <ArrowUpRight className="w-3.5 h-3.5" />
+                </p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
 
     {/* 3. ACHIEVEMENTS */}
     <section
@@ -111,7 +132,7 @@ const HomePage = () => (
         <Reveal>
           <Eyebrow>Achievements</Eyebrow>
           <h2 className="display-2 mt-4 max-w-3xl">
-            A few moments that recognised the work, but also pushed me to keep building.
+            A few moments that recognised the work and pushed me to keep building.
           </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
@@ -122,9 +143,7 @@ const HomePage = () => (
                 <p className="font-display text-lg leading-snug tracking-tight mb-2">
                   {a.title}
                 </p>
-                <p className="text-sm text-foreground/65 leading-relaxed">
-                  {a.blurb}
-                </p>
+                <p className="text-sm text-foreground/65 leading-relaxed">{a.blurb}</p>
               </div>
             </Reveal>
           ))}
