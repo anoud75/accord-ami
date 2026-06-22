@@ -7,11 +7,11 @@
 @layer base {
   :root {
     /* Notion-minimalist grayscale palette — HSL */
-    --background: 40 25% 96%;          /* warm sketchbook off-white */
+    --background: 0 0% 99%;            /* near-white */
     --foreground: 0 0% 9%;             /* near-black ink */
     --ink: 0 0% 9%;
-    --ivory: 40 25% 96%;
-    --ivory-deep: 40 20% 92%;
+    --ivory: 0 0% 99%;
+    --ivory-deep: 0 0% 96%;
 
     /* Legacy accent tokens kept but neutralised to grayscale */
     --teal: 0 0% 9%;
@@ -54,7 +54,7 @@
 
   html, body {
     @apply bg-background text-foreground;
-    font-family: 'DM Sans', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-family: 'Manrope', 'Noto Sans Arabic', system-ui, sans-serif;
   }
 
   body {
@@ -62,13 +62,13 @@
   }
 
   :lang(ar), [dir="rtl"] {
-    font-family: 'Noto Sans Arabic', 'DM Sans', sans-serif;
+    font-family: 'Noto Sans Arabic', 'Manrope', sans-serif;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Instrument Serif', 'Noto Sans Arabic', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-family: 'Sora', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   ::selection {
@@ -91,33 +91,29 @@
     @apply text-[11px] font-medium tracking-[0.22em] uppercase text-foreground/55;
   }
   .display-1 {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    font-weight: 400;
+    font-family: 'Sora', system-ui, sans-serif;
+    font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 600;
   }
   .display-2 {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-family: 'Sora', system-ui, sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
     line-height: 1.05;
-    letter-spacing: -0.015em;
-    font-weight: 400;
+    letter-spacing: -0.03em;
+    font-weight: 600;
   }
   .display-3 {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(1.5rem, 2.6vw, 2.25rem);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    font-weight: 400;
+    font-family: 'Sora', system-ui, sans-serif;
+    font-size: clamp(1.375rem, 2.4vw, 2rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    font-weight: 500;
   }
   .lede {
     @apply text-lg md:text-xl leading-relaxed text-foreground/70;
     max-width: 60ch;
-  }
-  .handwritten {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
   }
   .rule {
     @apply h-px w-full bg-foreground/10;

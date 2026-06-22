@@ -61,9 +61,9 @@ const SiteNav = () => {
         {/* Center: signature logomark */}
         <Link
           to="/"
-          className="justify-self-center font-serif italic text-2xl tracking-tight leading-none"
+          className="justify-self-center font-display font-semibold text-base tracking-tight leading-none"
         >
-          alanoud<span className="text-foreground/40">.</span>
+          Alanoud Alsamil
         </Link>
 
         {/* Right: side links */}

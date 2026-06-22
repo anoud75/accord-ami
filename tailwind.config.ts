@@ -65,10 +65,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["DM Sans", "Noto Sans Arabic", "system-ui", "sans-serif"],
-        arabic: ["Noto Sans Arabic", "DM Sans", "sans-serif"],
-        serif: ["Instrument Serif", "Georgia", "serif"],
-        display: ["Instrument Serif", "Georgia", "serif"],
+        sans: ["Manrope", "Noto Sans Arabic", "system-ui", "sans-serif"],
+        arabic: ["Noto Sans Arabic", "Manrope", "sans-serif"],
+        serif: ["Georgia", "serif"],
+        display: ["Sora", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
