@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronDown } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
 import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
@@ -70,6 +70,23 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             onClick={() => setOpen((v) => !v)}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground border-b border-foreground/30 hover:border-foreground transition-colors pb-0.5"
           >
+            {open ? "Show less" : "Read more"}
+            <ChevronDown
+              className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
+            />
+          </button>
+          {p.downloadUrl && (
+            <a
+              href={p.downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="ml-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground bg-foreground/5 hover:bg-foreground/10 border border-foreground/15 rounded-md px-3 py-1.5 transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              {p.downloadLabel ?? "Download"}
+            </a>
+          )}
             {open ? "Show less" : "Read more"}
             <ChevronDown
               className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
