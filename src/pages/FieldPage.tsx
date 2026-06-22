@@ -87,11 +87,6 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
               {p.downloadLabel ?? "Download"}
             </a>
           )}
-            {open ? "Show less" : "Read more"}
-            <ChevronDown
-              className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
-            />
-          </button>
           {open && (
             <p className="mt-5 text-foreground/75 leading-relaxed border-l border-foreground/20 pl-5">
               {p.readMore}
