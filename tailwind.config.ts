@@ -67,7 +67,8 @@ export default {
       fontFamily: {
         sans: ["DM Sans", "Noto Sans Arabic", "system-ui", "sans-serif"],
         arabic: ["Noto Sans Arabic", "DM Sans", "sans-serif"],
-        serif: ["Georgia", "serif"],
+        serif: ["Instrument Serif", "Georgia", "serif"],
+        display: ["Instrument Serif", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
