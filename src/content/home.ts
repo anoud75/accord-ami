@@ -5,7 +5,10 @@ import barqIntro from "@/assets/barqintro.pdf.asset.json";
 import mirsadCover from "@/assets/mirsad-cover.png.asset.json";
 import mirsadPdf from "@/assets/mirsad.pdf.asset.json";
 import yamamahScreening from "@/assets/yamamah-screening.png.asset.json";
+import yamamahScreening from "@/assets/yamamah-screening.png.asset.json";
 import yamamahDemographics from "@/assets/yamamah-demographics.png.asset.json";
+import yamamahPharmacyMedical from "@/assets/yamamah-pharmacy-medical.png.asset.json";
+import yamamahPharmacyCareflow from "@/assets/yamamah-pharmacy-careflow.png.asset.json";
 
 
 export interface ProjectBlock {
