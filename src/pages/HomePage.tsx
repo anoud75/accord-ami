@@ -17,7 +17,7 @@ const HomePage = () => (
     {/* 1. ABOUT */}
     <section id="about" className="pt-20 md:pt-28 pb-24 md:pb-28 scroll-mt-20">
       <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-        <div className="md:col-span-7 order-2 md:order-1">
+        <div className="md:col-span-7 order-2">
           <Reveal>
             <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
           </Reveal>
@@ -73,7 +73,7 @@ const HomePage = () => (
           </Reveal>
         </div>
 
-        <div className="md:col-span-5 order-1 md:order-2">
+        <div className="md:col-span-5 order-1">
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-md overflow-hidden bg-ivory-deep border border-foreground/10">
               <img
