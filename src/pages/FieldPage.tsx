@@ -28,21 +28,19 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             <img
               src={p.mainImage}
               alt={p.title}
-              className="w-full rounded-md border border-foreground/10 object-cover"
+              className="w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep"
             />
           ) : (
-            <ImagePlaceholder label="Main image" />
+            <ImagePlaceholder aspect="aspect-[16/10]" label="Main image" />
           )}
           {p.secondaryImage ? (
             <img
               src={p.secondaryImage}
               alt=""
-              className="w-2/3 rounded-md border border-foreground/10 object-cover"
+              className="w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep"
             />
           ) : (
-            <div className="w-2/3">
-              <ImagePlaceholder aspect="aspect-[4/3]" label="Optional image" />
-            </div>
+            !p.mainImage && <ImagePlaceholder aspect="aspect-[16/10]" label="Optional image" />
           )}
         </div>
 
