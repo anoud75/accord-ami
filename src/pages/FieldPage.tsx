@@ -28,7 +28,7 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             <img
               src={p.mainImage}
               alt={p.title}
-              className="w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep"
+              className={`w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep ${p.blurImages ? "blur-[3px]" : ""}`}
             />
           ) : (
             <ImagePlaceholder aspect="aspect-[16/10]" label="Main image" />
@@ -37,7 +37,7 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             <img
               src={p.secondaryImage}
               alt=""
-              className="w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep"
+              className={`w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep ${p.blurImages ? "blur-[3px]" : ""}`}
             />
           ) : (
             !p.mainImage && <ImagePlaceholder aspect="aspect-[16/10]" label="Optional image" />
