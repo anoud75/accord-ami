@@ -82,28 +82,6 @@ const HealthcarePage = () => {
       </section>
 
       {/* Confidential */}
-      <section className="bg-ivory-deep/50 border-t border-foreground/10">
-        <div className="container-edit py-16">
-          <Reveal>
-            <Eyebrow>Selected Healthcare Work</Eyebrow>
-            <h2 className="display-3 mt-4 mb-10">Anonymised, confidential, and enterprise engagements.</h2>
-          </Reveal>
-          <div className="grid md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
-            {confidential.map((c) => (
-              <Reveal key={c.title}>
-                <div className="bg-ivory p-7 h-full">
-                  <p className="font-medium text-lg mb-2">{c.title}</p>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{c.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <p className="mt-8 text-xs text-foreground/55 max-w-2xl">
-            For confidential projects, client names, patient data, and internal dashboards are not exposed.
-            Workflows are presented through anonymised diagrams and safe prototypes.
-          </p>
-        </div>
-      </section>
     </PageShell>
   );
 };
