@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,11 +7,11 @@
 @layer base {
   :root {
     /* Notion-minimalist grayscale palette — HSL */
-    --background: 0 0% 99%;            /* near-white */
+    --background: 40 25% 96%;          /* warm sketchbook off-white */
     --foreground: 0 0% 9%;             /* near-black ink */
     --ink: 0 0% 9%;
-    --ivory: 0 0% 99%;
-    --ivory-deep: 0 0% 96%;
+    --ivory: 40 25% 96%;
+    --ivory-deep: 40 20% 92%;
 
     /* Legacy accent tokens kept but neutralised to grayscale */
     --teal: 0 0% 9%;
@@ -66,8 +66,9 @@
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'DM Sans', 'Noto Sans Arabic', system-ui, sans-serif;
-    letter-spacing: -0.04em;
+    font-family: 'Instrument Serif', 'Noto Sans Arabic', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
   }
 
   ::selection {
@@ -90,26 +91,33 @@
     @apply text-[11px] font-medium tracking-[0.22em] uppercase text-foreground/55;
   }
   .display-1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1.02;
-    letter-spacing: -0.06em;
-    font-weight: 500;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    font-weight: 400;
   }
   .display-2 {
-    font-size: clamp(1.875rem, 4.2vw, 3.25rem);
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(2.25rem, 5vw, 4rem);
     line-height: 1.05;
-    letter-spacing: -0.05em;
-    font-weight: 500;
+    letter-spacing: -0.015em;
+    font-weight: 400;
   }
   .display-3 {
-    font-size: clamp(1.375rem, 2.4vw, 2rem);
-    line-height: 1.18;
-    letter-spacing: -0.04em;
-    font-weight: 500;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 400;
   }
   .lede {
     @apply text-lg md:text-xl leading-relaxed text-foreground/70;
     max-width: 60ch;
+  }
+  .handwritten {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
   }
   .rule {
     @apply h-px w-full bg-foreground/10;
