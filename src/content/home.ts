@@ -78,6 +78,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "I worked across Yamamah Population Health as one connected product, not separate features. My work moved from strategy and product logic into workflows, dashboards, care coordination, AI behaviour, UX/UI, and the portfolio used to communicate the product to global clients.",
+        mainImage: yamamahDemographics.url,
+        secondaryImage: yamamahScreening.url,
+        blurImages: true,
       },
       {
         slug: "yamamah-pharmacy",
