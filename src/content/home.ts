@@ -20,6 +20,7 @@ export interface ProjectBlock {
   secondaryImage?: string;
   downloadUrl?: string;
   downloadLabel?: string;
+  blurImages?: boolean;
 }
 
 export interface MethodologyStep {
