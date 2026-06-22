@@ -13,12 +13,7 @@ const lensSteps = [
   { label: "Outcomes", body: "Efficiency, visibility, care quality, decision support, reduced rework, adoption, and scale." },
 ];
 
-const confidential = [
-  { title: "Confidential Enterprise Healthcare Transformation", body: "Healthcare digital-transformation work involving workflow design, requirements, stakeholder alignment, and delivery support." },
-  { title: "Confidential Defence Health Initiative", body: "An anonymised healthcare programme involving operational complexity, role-based workflows, and secure service design." },
-  { title: "Confidential Public-Sector Health Initiative", body: "A government-related healthcare product initiative focused on digital transformation, service design, and product requirements." },
-  { title: "Healthcare Learning & Course Rebrand", body: "Reframing clinical and educational material into clearer learning experiences, visual systems, branded assets, and accessible communication." },
-];
+
 
 const HealthcarePage = () => {
   const all = projectsBySector("healthcare");
