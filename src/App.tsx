@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/retrofly/ErrorBoundary";
 import HomePage from "./pages/HomePage";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
+import FieldPage from "./pages/FieldPage";
 import NotFound from "./pages/NotFound";
 
 // Handles "/#section" anchor links from other routes
@@ -16,7 +16,6 @@ const HashScroller = () => {
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.slice(1);
-      // wait for layout
       requestAnimationFrame(() => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -36,7 +35,7 @@ const App = () => (
         <HashScroller />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/work/:slug" element={<ProjectDetailPage />} />
+          <Route path="/work/:slug" element={<FieldPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
