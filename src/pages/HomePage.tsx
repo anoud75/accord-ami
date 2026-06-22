@@ -1,53 +1,72 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download, Mail, Github, Linkedin } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
-import { Eyebrow, Reveal, BilingualStatement } from "@/components/portfolio/atoms";
-import { sectors } from "@/content/sectors";
-import { flagshipProjects } from "@/content/projects";
-import { capabilities, tools } from "@/content/methodology";
+import { Eyebrow, Reveal, StatusBadge } from "@/components/portfolio/atoms";
+import { fields, achievements, skillsStrip, roles } from "@/content/home";
+import portrait from "@/assets/alanoud-portrait.jpg.asset.json";
+import cv from "@/assets/cv.asset.json";
 
 const HomePage = () => (
   <PageShell>
     <SEO
-      title="Alanoud Alsamil — Product, Experience & AI"
-      description="Product strategy, experience design, and AI delivery across healthcare, fintech, environment, and inclusion."
+      title="Alanoud Alsamil — Product, Business Analysis, UX/UI & AI Strategy"
+      description="Personal portfolio of Alanoud Alsamil. Product management, business analysis, UX/UI, and AI product strategy across healthcare, fintech, environment, and inclusion."
     />
 
-    {/* Hero — split: portrait + statement */}
-    <section className="pt-20 md:pt-28 pb-24 md:pb-32">
-      <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+    {/* 1. Personal Introduction */}
+    <section id="intro" className="pt-20 md:pt-28 pb-24 md:pb-32 scroll-mt-20">
+      <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-start">
         <div className="md:col-span-7 order-2 md:order-1">
           <Reveal>
-            <Eyebrow>Product · Experience · AI</Eyebrow>
+            <Eyebrow>Product · Business Analysis · UX/UI · AI Strategy</Eyebrow>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="display-1 mt-6">
-              I turn complex systems<br />
-              into products people<br />
-              can <span className="text-foreground/55">actually use.</span>
+              Hi, I'm Alanoud.
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="lede mt-8">
-              Alanoud Alsamil. I build products, services, and AI systems across healthcare,
-              fintech, environment, and inclusion — anchored in strategy, evidence, and human need.
-            </p>
+            <div className="lede mt-8 space-y-5 max-w-2xl">
+              <p>
+                I work across product management, business analysis, UX/UI, and AI product strategy.
+              </p>
+              <p>
+                Most of my work starts with something complex or unclear — a healthcare workflow, a new AI idea,
+                a fragmented process, or a product that needs direction. I help turn that into a clear product,
+                practical workflows, defined requirements, and an experience people can actually use.
+              </p>
+              <p>
+                I enjoy working end-to-end: understanding the problem, shaping the scope, mapping the workflow,
+                designing the experience, and helping the team move it toward delivery.
+              </p>
+            </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/healthcare"
-                className="inline-flex items-center gap-2 bg-foreground text-ivory px-6 py-3 text-sm rounded-md hover:bg-foreground/85 transition-colors"
-              >
-                See selected work <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-3 text-sm rounded-md hover:border-foreground transition-colors"
-              >
-                About me
-              </Link>
+            <ul className="mt-10 flex flex-wrap gap-2">
+              {roles.map((r) => (
+                <li
+                  key={r}
+                  className="text-xs px-3 py-1.5 border border-foreground/20 rounded-full text-foreground/80"
+                >
+                  {r}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-8">
+              <p className="eyebrow mb-3">Skills</p>
+              <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-foreground/70">
+                {skillsStrip.map((s, i) => (
+                  <li key={s} className="flex items-center gap-3">
+                    <span>{s}</span>
+                    {i < skillsStrip.length - 1 && (
+                      <span className="text-foreground/25">·</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
@@ -55,128 +74,157 @@ const HomePage = () => (
         <div className="md:col-span-5 order-1 md:order-2">
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-md overflow-hidden bg-ivory-deep border border-foreground/10">
-              {/* Placeholder portrait slot — upload your photo to src/assets/portrait.jpg */}
-              <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
-                <p className="text-xs uppercase tracking-[0.22em] text-foreground/40 leading-relaxed">
-                  Your portrait<br/>goes here
-                </p>
-              </div>
+              <img
+                src={portrait.url}
+                alt="Portrait of Alanoud Alsamil"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </Reveal>
         </div>
       </div>
     </section>
 
-    {/* Sector cards */}
-    <section className="py-20 border-t border-foreground/10">
-      <div className="container-edit">
+    {/* 2. Work by Field */}
+    <section id="work" className="border-t border-foreground/10 scroll-mt-20">
+      <div className="container-edit py-20">
         <Reveal>
-          <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
-            <h2 className="display-2 max-w-2xl">Five sectors. One way of thinking.</h2>
-            <span className="text-sm text-foreground/55">Explore by domain</span>
-          </div>
+          <Eyebrow>Selected Work</Eyebrow>
+          <h2 className="display-2 mt-4 max-w-3xl">Work by field.</h2>
         </Reveal>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sectors.map((s, i) => (
-            <Reveal key={s.key} delay={i * 0.05}>
-              <Link
-                to={s.slug}
-                className="block h-full bg-ivory border border-foreground/15 rounded-md p-7 hover:border-foreground/50 hover:-translate-y-1 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-xs tracking-[0.18em] text-foreground/45">
-                    0{i + 1} / 0{sectors.length}
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-foreground/40 group-hover:text-foreground transition" />
+      </div>
+
+      {fields.map((field, fi) => (
+        <div
+          key={field.id}
+          id={field.id}
+          className="border-t border-foreground/10 scroll-mt-20"
+        >
+          <div className="container-edit py-20 md:py-24">
+            <Reveal>
+              <div className="flex items-baseline gap-6 mb-3">
+                <span className="text-sm text-foreground/45 tabular-nums">
+                  {String(fi + 1).padStart(2, "0")}
+                </span>
+                <h3 className="display-3">{field.title}</h3>
+              </div>
+            </Reveal>
+            {field.intro && (
+              <Reveal delay={0.05}>
+                <p className="lede max-w-3xl mt-6">{field.intro}</p>
+              </Reveal>
+            )}
+
+            <div className="grid md:grid-cols-2 gap-5 mt-12">
+              {field.projects.map((p, pi) => (
+                <Reveal key={p.slug} delay={pi * 0.04}>
+                  <Link
+                    to={`/work/${p.slug}`}
+                    className="group block h-full bg-ivory border border-foreground/15 rounded-md p-7 hover:border-foreground/50 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between mb-5">
+                      <StatusBadge status={p.status} />
+                      <ArrowUpRight className="w-4 h-4 text-foreground/40 group-hover:text-foreground transition" />
+                    </div>
+                    <h4 className="font-display text-xl md:text-2xl leading-snug tracking-tight mb-4">
+                      {p.title}
+                    </h4>
+                    <p className="text-sm text-foreground/70 leading-relaxed mb-5">
+                      {p.summary}
+                    </p>
+                    <ul className="flex flex-wrap gap-1.5">
+                      {p.tags.slice(0, 6).map((t) => (
+                        <li
+                          key={t}
+                          className="text-[11px] px-2 py-1 border border-foreground/15 text-foreground/65 rounded-sm"
+                        >
+                          {t}
+                        </li>
+                      ))}
+                    </ul>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </section>
+
+    {/* 3. Achievements */}
+    <section
+      id="achievements"
+      className="border-t border-foreground/10 bg-ivory-deep/40 scroll-mt-20"
+    >
+      <div className="container-edit py-24">
+        <Reveal>
+          <Eyebrow>Achievements</Eyebrow>
+          <h2 className="display-2 mt-4 max-w-3xl">
+            Recognition along the way.
+          </h2>
+        </Reveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+          {achievements.map((a, i) => (
+            <Reveal key={a.title} delay={i * 0.04}>
+              <div className="h-full bg-ivory border border-foreground/15 rounded-md p-6">
+                <div className="flex items-baseline justify-between mb-3">
+                  <span className="eyebrow">{a.organisation}</span>
+                  <span className="text-xs text-foreground/45">{a.year}</span>
                 </div>
-                <h3 className="font-display text-2xl md:text-[1.65rem] mb-4 leading-tight tracking-tight">{s.label}</h3>
-                <p className="text-sm text-foreground/65 leading-relaxed">{s.description}</p>
-              </Link>
+                <p className="font-display text-lg leading-snug tracking-tight mb-2">
+                  {a.title}
+                </p>
+                <p className="text-sm text-foreground/65 leading-relaxed">
+                  {a.blurb}
+                </p>
+              </div>
             </Reveal>
           ))}
         </div>
       </div>
     </section>
 
-    {/* Featured work */}
-    <section className="py-24 border-t border-foreground/10">
-      <div className="container-edit">
+    {/* 4. Final Footer / Contact */}
+    <section id="contact" className="border-t border-foreground/10 scroll-mt-20">
+      <div className="container-narrow py-24 text-center">
         <Reveal>
-          <Eyebrow>Featured Work</Eyebrow>
-          <h2 className="display-2 mt-4 mb-14 max-w-3xl">A few things I'm proud of.</h2>
-        </Reveal>
-        <div className="space-y-3">
-          {flagshipProjects.map((p, i) => {
-            const sector = sectors.find((s) => s.key === p.sector)!;
-            return (
-              <Reveal key={p.slug} delay={i * 0.05}>
-                <Link
-                  to={sector.slug}
-                  className="group grid md:grid-cols-12 gap-4 items-baseline py-6 border-b border-foreground/10 hover:border-foreground/40 transition-colors"
-                >
-                  <span className="md:col-span-1 text-sm text-foreground/45">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="md:col-span-6 font-display text-xl md:text-2xl leading-snug tracking-tight">
-                    {p.title}
-                  </h3>
-                  <span className="md:col-span-3 text-sm text-foreground/55">{sector.shortLabel}</span>
-                  <span className="md:col-span-2 text-sm text-foreground/55 flex items-center gap-1 md:justify-end">
-                    Read <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-              </Reveal>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-
-    {/* Capabilities + Tools */}
-    <section className="py-20 border-t border-foreground/10 bg-ivory-deep/40">
-      <div className="container-edit grid md:grid-cols-2 gap-14">
-        <Reveal>
-          <Eyebrow>What I do</Eyebrow>
-          <ul className="mt-5 space-y-2">
-            {capabilities.map((c) => (
-              <li key={c} className="font-display text-lg md:text-xl text-foreground/85 leading-snug tracking-tight">
-                {c}
-              </li>
-            ))}
-          </ul>
+          <h2 className="display-2 mb-6">
+            Thanks for taking the time to look through my work.
+          </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <Eyebrow>Tools I reach for</Eyebrow>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {tools.map((t) => (
-              <span
-                key={t}
-                className="text-xs px-3 py-1.5 border border-foreground/20 rounded-full bg-ivory"
-              >
-                {t}
-              </span>
-            ))}
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <a
+              href={cv.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-foreground text-ivory px-5 py-2.5 text-sm rounded-md hover:bg-foreground/85 transition-colors"
+            >
+              <Download className="w-4 h-4" /> Download CV
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alanoud-alsamil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-foreground/20 px-5 py-2.5 text-sm rounded-md hover:border-foreground transition-colors"
+            >
+              <Linkedin className="w-4 h-4" /> LinkedIn
+            </a>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-foreground/20 px-5 py-2.5 text-sm rounded-md hover:border-foreground transition-colors"
+            >
+              <Github className="w-4 h-4" /> GitHub
+            </a>
+            <a
+              href="mailto:hello@alanoud.com"
+              className="inline-flex items-center gap-2 border border-foreground/20 px-5 py-2.5 text-sm rounded-md hover:border-foreground transition-colors"
+            >
+              <Mail className="w-4 h-4" /> Email
+            </a>
           </div>
-        </Reveal>
-      </div>
-    </section>
-
-    {/* Closing bilingual */}
-    <section className="py-28 text-center">
-      <div className="container-narrow">
-        <Reveal>
-          <BilingualStatement
-            en="I work best where there is complexity to untangle, people to understand, and a meaningful outcome to build toward."
-            ar="أعمل بأفضل حالاتي حيث يوجد تعقيد يحتاج إلى وضوح، وأشخاص يستحقون الفهم، ونتائج ذات معنى تستحق البناء."
-          />
-        </Reveal>
-        <Reveal delay={0.15}>
-          <Link
-            to="/contact"
-            className="mt-12 inline-flex items-center gap-2 text-base underline underline-offset-8 decoration-foreground/30 hover:decoration-foreground transition"
-          >
-            Say hello <ArrowUpRight className="w-4 h-4" />
-          </Link>
         </Reveal>
       </div>
     </section>
