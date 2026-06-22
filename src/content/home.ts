@@ -2,6 +2,8 @@
 import barqCover from "@/assets/barq-cover.png.asset.json";
 import barqAbTest from "@/assets/barq-ab-test.png.asset.json";
 import barqIntro from "@/assets/barqintro.pdf.asset.json";
+import mirsadCover from "@/assets/mirsad-cover.png.asset.json";
+import mirsadPdf from "@/assets/mirsad.pdf.asset.json";
 
 
 export interface ProjectBlock {
@@ -223,6 +225,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "Mirsad framed fraud prevention as a calm, informative moment in the user's journey — designed to slow risky decisions without blocking trusted ones.",
+        mainImage: mirsadCover.url,
+        downloadUrl: mirsadPdf.url,
+        downloadLabel: "Download Case Study (PDF)",
       },
     ],
   },
