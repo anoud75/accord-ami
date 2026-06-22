@@ -8,6 +8,8 @@ import yamamahScreening from "@/assets/yamamah-screening.png.asset.json";
 import yamamahDemographics from "@/assets/yamamah-demographics.png.asset.json";
 import yamamahPharmacyMedical from "@/assets/yamamah-pharmacy-medical.png.asset.json";
 import yamamahPharmacyCareflow from "@/assets/yamamah-pharmacy-careflow.png.asset.json";
+import hhcPathways from "@/assets/hhc-pathways.png.asset.json";
+import hhcProtocol from "@/assets/hhc-protocol.png.asset.json";
 
 
 export interface ProjectBlock {
