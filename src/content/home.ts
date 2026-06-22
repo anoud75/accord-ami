@@ -10,6 +10,8 @@ export interface ProjectBlock {
   factsLine?: string;
   mainImage?: string;
   secondaryImage?: string;
+  downloadUrl?: string;
+  downloadLabel?: string;
 }
 
 export interface MethodologyStep {
