@@ -1,45 +1,28 @@
-import { Component, type ReactNode } from "react";
-import ErrorState from "@/components/retrofly/ErrorState";
+import { Component, ReactNode } from "react";
 
-interface ErrorBoundaryProps {
-  children: ReactNode;
-}
+interface Props { children: ReactNode }
+interface State { hasError: boolean; error?: Error }
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-}
-
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
+export default class ErrorBoundary extends Component<Props, State> {
+  state: State = { hasError: false };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
-
-  static getDerivedStateFromError(): ErrorBoundaryState {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, info: { componentStack?: string | null }) {
-    console.error("ErrorBoundary caught an error:", error, info.componentStack);
-  }
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
+  componentDidCatch(error: Error) { console.error("App error:", error); }
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center p-4">
-          <ErrorState
-            message="Something unexpected happened"
-            onRetry={this.handleReload}
-          />
+        <div className="min-h-screen flex items-center justify-center p-6">
+          <div className="max-w-md text-center">
+            <p className="eyebrow mb-4">Something broke</p>
+            <h2 className="display-3 mb-4">An unexpected error occurred.</h2>
+            <button onClick={() => location.reload()} className="ink-link">
+              Reload the page
+            </button>
+          </div>
         </div>
       );
     }
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;
