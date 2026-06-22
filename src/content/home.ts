@@ -4,6 +4,8 @@ import barqAbTest from "@/assets/barq-ab-test.png.asset.json";
 import barqIntro from "@/assets/barqintro.pdf.asset.json";
 import mirsadCover from "@/assets/mirsad-cover.png.asset.json";
 import mirsadPdf from "@/assets/mirsad.pdf.asset.json";
+import yamamahScreening from "@/assets/yamamah-screening.png.asset.json";
+import yamamahDemographics from "@/assets/yamamah-demographics.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -18,6 +20,7 @@ export interface ProjectBlock {
   secondaryImage?: string;
   downloadUrl?: string;
   downloadLabel?: string;
+  blurImages?: boolean;
 }
 
 export interface MethodologyStep {
@@ -75,6 +78,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "I worked across Yamamah Population Health as one connected product, not separate features. My work moved from strategy and product logic into workflows, dashboards, care coordination, AI behaviour, UX/UI, and the portfolio used to communicate the product to global clients.",
+        mainImage: yamamahDemographics.url,
+        secondaryImage: yamamahScreening.url,
+        blurImages: true,
       },
       {
         slug: "yamamah-pharmacy",
