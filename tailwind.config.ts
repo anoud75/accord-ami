@@ -65,9 +65,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["IBM Plex Sans", "IBM Plex Sans Arabic", "system-ui", "sans-serif"],
-        arabic: ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
-        serif: ["IBM Plex Serif", "Georgia", "serif"],
+        sans: ["DM Sans", "Noto Sans Arabic", "system-ui", "sans-serif"],
+        arabic: ["Noto Sans Arabic", "DM Sans", "sans-serif"],
+        serif: ["Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },

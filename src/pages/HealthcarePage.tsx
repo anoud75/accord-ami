@@ -13,12 +13,7 @@ const lensSteps = [
   { label: "Outcomes", body: "Efficiency, visibility, care quality, decision support, reduced rework, adoption, and scale." },
 ];
 
-const confidential = [
-  { title: "Confidential Enterprise Healthcare Transformation", body: "Healthcare digital-transformation work involving workflow design, requirements, stakeholder alignment, and delivery support." },
-  { title: "Confidential Defence Health Initiative", body: "An anonymised healthcare programme involving operational complexity, role-based workflows, and secure service design." },
-  { title: "Confidential Public-Sector Health Initiative", body: "A government-related healthcare product initiative focused on digital transformation, service design, and product requirements." },
-  { title: "Healthcare Learning & Course Rebrand", body: "Reframing clinical and educational material into clearer learning experiences, visual systems, branded assets, and accessible communication." },
-];
+
 
 const HealthcarePage = () => {
   const all = projectsBySector("healthcare");
@@ -82,28 +77,6 @@ const HealthcarePage = () => {
       </section>
 
       {/* Confidential */}
-      <section className="bg-ivory-deep/50 border-t border-foreground/10">
-        <div className="container-edit py-16">
-          <Reveal>
-            <Eyebrow>Selected Healthcare Work</Eyebrow>
-            <h2 className="display-3 mt-4 mb-10">Anonymised, confidential, and enterprise engagements.</h2>
-          </Reveal>
-          <div className="grid md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
-            {confidential.map((c) => (
-              <Reveal key={c.title}>
-                <div className="bg-ivory p-7 h-full">
-                  <p className="font-medium text-lg mb-2">{c.title}</p>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{c.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <p className="mt-8 text-xs text-foreground/55 max-w-2xl">
-            For confidential projects, client names, patient data, and internal dashboards are not exposed.
-            Workflows are presented through anonymised diagrams and safe prototypes.
-          </p>
-        </div>
-      </section>
     </PageShell>
   );
 };

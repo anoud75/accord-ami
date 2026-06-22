@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,42 +6,44 @@
 
 @layer base {
   :root {
-    /* Core palette — HSL values only */
-    --background: 38 41% 94%;          /* Warm Ivory #F6F1E8 */
-    --foreground: 219 47% 13%;         /* Primary Ink #111C2E */
-    --ink: 219 47% 13%;
-    --ivory: 38 41% 94%;
-    --ivory-deep: 38 28% 88%;
-    --teal: 185 76% 22%;               /* Deep Teal #0D5C63 */
-    --aqua: 176 60% 58%;               /* Signal Aqua #52D7CF */
-    --coral: 14 64% 57%;               /* Burnt Coral #D86C4B */
-    --lavender: 251 43% 73%;           /* Dusty Lavender #A69AD8 */
+    /* Notion-minimalist grayscale palette — HSL */
+    --background: 0 0% 99%;            /* near-white */
+    --foreground: 0 0% 9%;             /* near-black ink */
+    --ink: 0 0% 9%;
+    --ivory: 0 0% 99%;
+    --ivory-deep: 0 0% 96%;
 
-    --card: 38 41% 96%;
-    --card-foreground: 219 47% 13%;
-    --popover: 38 41% 96%;
-    --popover-foreground: 219 47% 13%;
-    --primary: 219 47% 13%;
-    --primary-foreground: 38 41% 94%;
-    --secondary: 38 28% 88%;
-    --secondary-foreground: 219 47% 13%;
-    --muted: 38 28% 88%;
-    --muted-foreground: 219 20% 35%;
-    --accent: 185 76% 22%;
-    --accent-foreground: 38 41% 94%;
-    --destructive: 14 64% 57%;
-    --destructive-foreground: 38 41% 94%;
-    --border: 38 20% 82%;
-    --input: 38 20% 82%;
-    --ring: 219 47% 13%;
-    --radius: 0.25rem;
+    /* Legacy accent tokens kept but neutralised to grayscale */
+    --teal: 0 0% 9%;
+    --aqua: 0 0% 45%;
+    --coral: 0 0% 25%;
+    --lavender: 0 0% 60%;
 
-    /* Sector accents */
-    --sector-health: 200 70% 28%;      /* deep navy-teal */
-    --sector-fintech: 219 47% 13%;     /* midnight */
-    --sector-env: 185 76% 22%;         /* deep teal */
-    --sector-ai: 251 43% 60%;          /* purple */
-    --sector-brand: 14 64% 57%;        /* coral */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 99%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 99%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 99%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
+    --radius: 0.375rem;
+
+    /* Sector tokens — all neutral */
+    --sector-health: 0 0% 9%;
+    --sector-fintech: 0 0% 9%;
+    --sector-env: 0 0% 9%;
+    --sector-ai: 0 0% 9%;
+    --sector-brand: 0 0% 9%;
   }
 
   * {
@@ -52,25 +54,20 @@
 
   html, body {
     @apply bg-background text-foreground;
-    font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
-    font-feature-settings: "ss01", "ss02";
+    font-family: 'DM Sans', 'Noto Sans Arabic', system-ui, sans-serif;
   }
 
   body {
-    background-color: hsl(var(--ivory));
-    background-image:
-      radial-gradient(at 12% 8%, hsl(var(--aqua) / 0.06) 0px, transparent 50%),
-      radial-gradient(at 88% 92%, hsl(var(--coral) / 0.04) 0px, transparent 50%);
     min-height: 100vh;
   }
 
   :lang(ar), [dir="rtl"] {
-    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    font-family: 'Noto Sans Arabic', 'DM Sans', sans-serif;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'DM Sans', 'Noto Sans Arabic', system-ui, sans-serif;
+    letter-spacing: -0.04em;
   }
 
   ::selection {
@@ -90,39 +87,38 @@
     @apply mx-auto w-full max-w-7xl px-6 md:px-10;
   }
   .eyebrow {
-    @apply text-[11px] font-medium tracking-[0.22em] uppercase text-foreground/60;
+    @apply text-[11px] font-medium tracking-[0.22em] uppercase text-foreground/55;
   }
   .display-1 {
-    font-size: clamp(2.75rem, 6.2vw, 5.5rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 1.02;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.06em;
     font-weight: 500;
   }
   .display-2 {
-    font-size: clamp(2rem, 4.4vw, 3.5rem);
+    font-size: clamp(1.875rem, 4.2vw, 3.25rem);
     line-height: 1.05;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.05em;
     font-weight: 500;
   }
   .display-3 {
-    font-size: clamp(1.5rem, 2.6vw, 2.25rem);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    font-size: clamp(1.375rem, 2.4vw, 2rem);
+    line-height: 1.18;
+    letter-spacing: -0.04em;
     font-weight: 500;
   }
   .lede {
-    @apply text-lg md:text-xl leading-relaxed text-foreground/75;
+    @apply text-lg md:text-xl leading-relaxed text-foreground/70;
     max-width: 60ch;
   }
   .rule {
-    @apply h-px w-full bg-foreground/15;
+    @apply h-px w-full bg-foreground/10;
   }
   .ink-link {
     @apply underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors;
   }
 }
 
-/* Subtle living path stroke animation */
 @keyframes pathDraw {
   to { stroke-dashoffset: 0; }
 }
