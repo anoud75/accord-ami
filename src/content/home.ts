@@ -1,4 +1,8 @@
 // Portfolio content — image-led, four fields only.
+import barqCover from "@/assets/barq-cover.png.asset.json";
+import barqAbTest from "@/assets/barq-ab-test.png.asset.json";
+import barqIntro from "@/assets/barqintro.pdf.asset.json";
+
 
 export interface ProjectBlock {
   slug: string;
@@ -198,6 +202,10 @@ export const fields: Field[] = [
         ],
         readMore:
           "Barq explored how a digital wallet could feel calmer and more confident in daily use — reducing friction in navigation, transactions, and account management.",
+        mainImage: barqCover.url,
+        secondaryImage: barqAbTest.url,
+        downloadUrl: barqIntro.url,
+        downloadLabel: "Download Case Study (PDF)",
       },
       {
         slug: "mirsad",
