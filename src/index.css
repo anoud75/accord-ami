@@ -112,7 +112,7 @@
     max-width: 60ch;
   }
   .rule {
-    @apply h-px w-full bg-foreground/12;
+    @apply h-px w-full bg-foreground/10;
   }
   .ink-link {
     @apply underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors;
