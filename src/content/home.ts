@@ -98,6 +98,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "This was not only a UI project. I worked from stakeholder needs through product scope, pharmacy workflows, business rules, user experience, and build-ready documentation.",
+        mainImage: yamamahPharmacyCareflow.url,
+        secondaryImage: yamamahPharmacyMedical.url,
+        blurImages: true,
       },
       {
         slug: "care-coordination",
