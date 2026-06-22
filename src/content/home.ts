@@ -4,6 +4,8 @@ import barqAbTest from "@/assets/barq-ab-test.png.asset.json";
 import barqIntro from "@/assets/barqintro.pdf.asset.json";
 import mirsadCover from "@/assets/mirsad-cover.png.asset.json";
 import mirsadPdf from "@/assets/mirsad.pdf.asset.json";
+import yamamahScreening from "@/assets/yamamah-screening.png.asset.json";
+import yamamahDemographics from "@/assets/yamamah-demographics.png.asset.json";
 
 
 export interface ProjectBlock {
