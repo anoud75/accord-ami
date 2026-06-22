@@ -123,6 +123,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "The focus was making care coordination practical at scale: less manual work, clearer ownership, and better visibility over tasks, open gaps, and follow-up.",
+        mainImage: hhcPathways.url,
+        secondaryImage: hhcProtocol.url,
+        blurImages: true,
       },
       {
         slug: "sleep-health-file",
