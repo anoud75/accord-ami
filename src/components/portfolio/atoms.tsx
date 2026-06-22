@@ -16,14 +16,24 @@ export const Eyebrow = ({ children }: { children: ReactNode }) => (
   <p className="eyebrow">{children}</p>
 );
 
-export const StatusBadge = ({ status }: { status: string }) => (
-  <span className="inline-flex items-center gap-1.5 text-[11px] tracking-wide uppercase text-foreground/65">
-    <span className="w-1.5 h-1.5 rounded-full bg-teal" />
-    {status}
-  </span>
-);
+// Status badge — intentionally hides "Confidential" labels per portfolio rule.
+export const StatusBadge = ({ status }: { status: string }) => {
+  if (!status || status === "Confidential") return null;
+  return (
+    <span className="inline-flex items-center gap-1.5 text-[11px] tracking-wide uppercase text-foreground/65">
+      <span className="w-1.5 h-1.5 rounded-full bg-foreground/50" />
+      {status}
+    </span>
+  );
+};
 
-export const WhyThisMatters = ({ children, accent = "teal" }: { children: ReactNode; accent?: "teal" | "coral" | "lavender" | "ai" }) => {
+export const WhyThisMatters = ({
+  children,
+  accent = "teal",
+}: {
+  children: ReactNode;
+  accent?: "teal" | "coral" | "lavender" | "ai";
+}) => {
   const colorClass = {
     teal: "border-teal",
     coral: "border-coral",
@@ -37,10 +47,3 @@ export const WhyThisMatters = ({ children, accent = "teal" }: { children: ReactN
     </div>
   );
 };
-
-export const BilingualStatement = ({ en, ar }: { en: string; ar: string }) => (
-  <div className="space-y-2 py-2">
-    <p className="display-3">{en}</p>
-    <p className="display-3 font-arabic text-foreground/70" dir="rtl">{ar}</p>
-  </div>
-);

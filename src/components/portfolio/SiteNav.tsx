@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const sections = [
-  { id: "intro", label: "About" },
+  { id: "about", label: "About" },
   { id: "work", label: "Work" },
   { id: "achievements", label: "Achievements" },
-  { id: "contact", label: "Contact" },
+  { id: "contact", label: "CV & Links" },
 ];
 
 const SiteNav = () => {
