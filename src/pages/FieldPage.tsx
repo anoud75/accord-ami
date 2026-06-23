@@ -85,6 +85,17 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
               {p.downloadLabel ?? "Download"}
             </a>
           )}
+          {p.liveUrl && (
+            <a
+              href={p.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground bg-foreground/5 hover:bg-foreground/10 border border-foreground/15 rounded-md px-3 py-1.5 transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              {p.liveLabel ?? "Visit Website"}
+            </a>
+          )}
           {open && (
             <p className="mt-5 text-foreground/75 leading-relaxed border-l border-foreground/20 pl-5">
               {p.readMore}
