@@ -386,6 +386,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "Sign Translate explored how AI could support two-way conversation between sign and spoken language, with a focus on Saudi Sign Language and real-world use.",
+        mainImage: signtranslateHero.url,
+        secondaryImage: signtranslateFeatures.url,
+        mainImageContain: true,
       },
       {
         slug: "muqla",
