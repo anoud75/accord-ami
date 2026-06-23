@@ -390,6 +390,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "Muqla used voice as the primary interface, letting visually impaired users shape stories together without depending on visual UI.",
+        mainImage: muqlaScreens.url,
+        mainImageContain: true,
       },
     ],
   },
