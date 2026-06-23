@@ -35,6 +35,8 @@ export interface ProjectBlock {
   downloadLabel?: string;
   blurImages?: boolean;
   mainImageContain?: boolean;
+  liveUrl?: string;
+  liveLabel?: string;
 }
 
 export interface MethodologyStep {
