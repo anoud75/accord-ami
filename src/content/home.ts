@@ -10,6 +10,8 @@ import yamamahPharmacyMedical from "@/assets/yamamah-pharmacy-medical.png.asset.
 import yamamahPharmacyCareflow from "@/assets/yamamah-pharmacy-careflow.png.asset.json";
 import hhcPathways from "@/assets/hhc-pathways.png.asset.json";
 import hhcProtocol from "@/assets/hhc-protocol.png.asset.json";
+import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
+import sleepMou from "@/assets/sleep-mou.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -144,6 +146,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "This work focused on turning sleep health from a broad topic into a clear strategic story with practical priorities, service insights, and a stronger visual language.",
+        mainImage: sleepObservatory.url,
+        secondaryImage: sleepMou.url,
       },
       {
         slug: "healthcare-ai",
