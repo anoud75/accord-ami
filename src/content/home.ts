@@ -22,6 +22,8 @@ import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.j
 import murjanMap from "@/assets/murjan-map.png.asset.json";
 import murjanDashboard from "@/assets/murjan-dashboard.png.asset.json";
 import muqlaScreens from "@/assets/muqla-screens.png.asset.json";
+import smartringHero from "@/assets/smartring-hero.png.asset.json";
+import smartringScreens from "@/assets/smartring-screens.png.asset.json";
 
 
 export interface ProjectBlock {
