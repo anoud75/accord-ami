@@ -19,6 +19,8 @@ import healthcareAiChatbot from "@/assets/healthcare-ai-chatbot.png.asset.json";
 import greenshiftMap from "@/assets/greenshift-map.png.asset.json";
 import greenshiftDashboard from "@/assets/greenshift-dashboard.png.asset.json";
 import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.json";
+import murjanMap from "@/assets/murjan-map.png.asset.json";
+import murjanDashboard from "@/assets/murjan-dashboard.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -314,6 +316,10 @@ export const fields: Field[] = [
         ],
         readMore:
           "Murjan focused on giving marine teams a clear operational picture of the reef — node health, environmental signals, and the alerts that need a response.",
+        mainImage: murjanDashboard.url,
+        secondaryImage: murjanMap.url,
+        liveUrl: "https://murjan.app/",
+        liveLabel: "Visit Website",
       },
     ],
   },
