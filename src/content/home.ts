@@ -30,6 +30,7 @@ export interface ProjectBlock {
   downloadUrl?: string;
   downloadLabel?: string;
   blurImages?: boolean;
+  mainImageContain?: boolean;
 }
 
 export interface MethodologyStep {
@@ -206,6 +207,7 @@ export const fields: Field[] = [
         readMore:
           "This work used visual storytelling and experience design to make sleep disorders more understandable for patients, students, healthcare professionals, and the public.",
         mainImage: sleepExhibition.url,
+        mainImageContain: true,
         downloadUrl: "https://www.dropbox.com/scl/fi/569acpcqotas3th1tew29/Strategic-partenership-proposal-updated.pdf?rlkey=flwggs13v5uiyx0t3hmdrctxz&st=9krgfgfn&dl=0",
         downloadLabel: "View Strategic Partnership Proposal (PDF)",
       },
