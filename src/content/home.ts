@@ -14,6 +14,7 @@ import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
 import sleepMou from "@/assets/sleep-mou.png.asset.json";
 import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
 import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
+import sleepExhibition from "@/assets/sleep-exhibition.png.asset.json";
 
 
 export interface ProjectBlock {
