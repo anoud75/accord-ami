@@ -336,16 +336,19 @@ export const fields: Field[] = [
         slug: "masmoa",
         title: "Masmoa",
         summary:
-          "An AI-enabled product concept supporting communication for deaf and mute users through gesture recognition and real-time output.",
+          "A card-based AAC (augmentative and alternative communication) app that helps deaf, mute, and autistic users express needs and requests through customisable emoji cards organised in personal folders.",
         role: "Product Strategy · Accessibility · AI Concept Design · UX/UI",
         ledBullets: [
-          "Inclusion problem framing",
-          "Product concept and user journey",
-          "AI behaviour and interaction model",
-          "UX/UI screens",
+          "Inclusion problem framing for deaf, mute, and autistic users",
+          "Card and folder system for everyday communication",
+          "Customisable emoji cards with colour and description",
+          "Accessible user journey and UX/UI screens",
         ],
         readMore:
-          "Masmoa explored how gesture and AI together could lower the barrier to everyday communication for deaf and mute users.",
+          "Masmoa makes communication easier by letting users build and organise their own visual cards — quick, tactile access to the words and requests they use most.",
+        mainImage: masmoaHero.url,
+        secondaryImage: masmoaCards.url,
+        mainImageContain: true,
       },
       {
         slug: "smart-ring",
