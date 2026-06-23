@@ -66,25 +66,26 @@ export const fields: Field[] = [
     slug: "healthcare",
     title: "Healthcare & Life Sciences",
     hero:
-      "I work on healthcare products where the challenge is never only the interface. It is making data, clinical logic, operational workflows, governance, and real user needs work together.",
+      "I work on healthcare products where most failures are operational, not technical. My approach combines Domain-Driven Design — so the system models the real clinical domain — with Crossing the Chasm — so it survives the move from pilot champions to everyday operational users.",
     methodology: [
       {
-        title: "Data-Driven Decisions",
-        line: "Turning population data, risk signals, service gaps, dashboards, and KPIs into action.",
+        title: "Ubiquitous Language",
+        line: "One precise definition for terms like Care Gap, Care Task, and Coordination Batch — shared across clinical, product, data, and engineering.",
       },
       {
-        title: "Clear Domain Logic",
-        line: "Defining shared language, business rules, roles, and product boundaries.",
+        title: "Bounded Contexts",
+        line: "Splitting the platform into Population Health, Care Coordination, Patient Engagement, and Reporting — clear ownership, no leaking logic.",
       },
       {
-        title: "Real Workflow Design",
-        line: "Understanding handoffs, bottlenecks, manual workarounds, and what happens before redesign.",
+        title: "Design for the Mainstream",
+        line: "Built for the pragmatic majority — nurses, coordinators, PHC and BHC teams — not the tech-friendly innovators who tolerate gaps.",
       },
       {
-        title: "Adoption at Scale",
-        line: "Designing for nurses, coordinators, operations, and everyday users — not only pilot champions.",
+        title: "Operational UX Metrics",
+        line: "Measured in clicks per task, time to complete, adoption rate, and workarounds outside the platform — not subjective feedback.",
       },
     ],
+
     projects: [
       {
         slug: "yamamah-population-health",
