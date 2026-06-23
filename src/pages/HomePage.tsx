@@ -23,7 +23,7 @@ const HomePage = () => (
             <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="font-display font-semibold tracking-[-0.035em] mt-6 text-2xl md:text-3xl leading-[1.1]">Hi, I'm Alanoud.</h1>
+            <h1 className="font-display font-extrabold tracking-[-0.04em] mt-6 text-3xl md:text-4xl leading-[1.05]">Hi, I'm Alanoud.</h1>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-6 space-y-4 max-w-2xl text-sm md:text-base leading-relaxed text-foreground/70">
