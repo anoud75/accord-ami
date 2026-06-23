@@ -16,6 +16,9 @@ import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
 import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
 import sleepExhibition from "@/assets/sleep-exhibition.png.asset.json";
 import healthcareAiChatbot from "@/assets/healthcare-ai-chatbot.png.asset.json";
+import greenshiftMap from "@/assets/greenshift-map.png.asset.json";
+import greenshiftDashboard from "@/assets/greenshift-dashboard.png.asset.json";
+import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.json";
 
 
 export interface ProjectBlock {
