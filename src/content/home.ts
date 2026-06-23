@@ -316,6 +316,10 @@ export const fields: Field[] = [
         ],
         readMore:
           "Murjan focused on giving marine teams a clear operational picture of the reef — node health, environmental signals, and the alerts that need a response.",
+        mainImage: murjanDashboard.url,
+        secondaryImage: murjanMap.url,
+        liveUrl: "https://murjan.app/",
+        liveLabel: "Visit Website",
       },
     ],
   },
