@@ -26,6 +26,8 @@ import smartringHero from "@/assets/smartring-hero.png.asset.json";
 import smartringScreens from "@/assets/smartring-screens.png.asset.json";
 import masmoaHero from "@/assets/masmoa-hero.png.asset.json";
 import masmoaCards from "@/assets/masmoa-cards.png.asset.json";
+import signtranslateHero from "@/assets/signtranslate-hero.jpg.asset.json";
+import signtranslateFeatures from "@/assets/signtranslate-features.jpg.asset.json";
 
 
 export interface ProjectBlock {
