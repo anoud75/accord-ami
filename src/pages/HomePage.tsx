@@ -140,6 +140,12 @@ const HomePage = () => (
           {achievements.map((a, i) => (
             <Reveal key={a.title} delay={Math.min(i, 5) * 0.04}>
               <div className="h-full bg-ivory border border-foreground/15 rounded-md p-6">
+                <img
+                  src={trophy.url}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-10 h-10 mb-4 object-contain"
+                />
                 <p className="eyebrow mb-3">{a.organisation}</p>
                 <p className="font-display text-lg leading-snug tracking-tight mb-2">
                   {a.title}
