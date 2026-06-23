@@ -12,8 +12,6 @@ import hhcPathways from "@/assets/hhc-pathways.png.asset.json";
 import hhcProtocol from "@/assets/hhc-protocol.png.asset.json";
 import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
 import sleepMou from "@/assets/sleep-mou.png.asset.json";
-import healthcareAiAssistant from "@/assets/healthcare-ai-assistant.png.asset.json";
-import healthcareAiDashboard from "@/assets/healthcare-ai-dashboard.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -167,9 +165,6 @@ export const fields: Field[] = [
         ],
         readMore:
           "I led the product definition and experience design of AI healthcare solutions, including what the AI should do, how users should interact with it, and what technical teams needed to build it clearly.",
-        mainImage: healthcareAiDashboard.url,
-        secondaryImage: healthcareAiAssistant.url,
-        blurImages: true,
       },
       {
         slug: "sleep-report-ai",
