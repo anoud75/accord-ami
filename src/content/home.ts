@@ -21,6 +21,7 @@ import greenshiftDashboard from "@/assets/greenshift-dashboard.png.asset.json";
 import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.json";
 import murjanMap from "@/assets/murjan-map.png.asset.json";
 import murjanDashboard from "@/assets/murjan-dashboard.png.asset.json";
+import muqlaScreens from "@/assets/muqla-screens.png.asset.json";
 
 
 export interface ProjectBlock {
