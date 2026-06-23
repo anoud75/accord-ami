@@ -146,6 +146,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "This work focused on turning sleep health from a broad topic into a clear strategic story with practical priorities, service insights, and a stronger visual language.",
+        mainImage: sleepObservatory.url,
+        secondaryImage: sleepMou.url,
       },
       {
         slug: "healthcare-ai",
