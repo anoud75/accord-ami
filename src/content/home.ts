@@ -15,6 +15,7 @@ import sleepMou from "@/assets/sleep-mou.png.asset.json";
 import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
 import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
 import sleepExhibition from "@/assets/sleep-exhibition.png.asset.json";
+import healthcareAiChatbot from "@/assets/healthcare-ai-chatbot.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -169,6 +170,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "I led the product definition and experience design of AI healthcare solutions, including what the AI should do, how users should interact with it, and what technical teams needed to build it clearly.",
+        mainImage: healthcareAiChatbot.url,
+        mainImageContain: true,
+        blurImages: true,
       },
       {
         slug: "sleep-report-ai",
