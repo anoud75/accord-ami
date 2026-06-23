@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronDown, Download } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download, ExternalLink } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
 import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
@@ -83,6 +83,17 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             >
               <Download className="w-4 h-4" />
               {p.downloadLabel ?? "Download"}
+            </a>
+          )}
+          {p.liveUrl && (
+            <a
+              href={p.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground bg-foreground/5 hover:bg-foreground/10 border border-foreground/15 rounded-md px-3 py-1.5 transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              {p.liveLabel ?? "Visit Website"}
             </a>
           )}
           {open && (

@@ -16,6 +16,9 @@ import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
 import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
 import sleepExhibition from "@/assets/sleep-exhibition.png.asset.json";
 import healthcareAiChatbot from "@/assets/healthcare-ai-chatbot.png.asset.json";
+import greenshiftMap from "@/assets/greenshift-map.png.asset.json";
+import greenshiftDashboard from "@/assets/greenshift-dashboard.png.asset.json";
+import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.json";
 
 
 export interface ProjectBlock {
@@ -32,6 +35,8 @@ export interface ProjectBlock {
   downloadLabel?: string;
   blurImages?: boolean;
   mainImageContain?: boolean;
+  liveUrl?: string;
+  liveLabel?: string;
 }
 
 export interface MethodologyStep {
@@ -286,6 +291,12 @@ export const fields: Field[] = [
         ],
         readMore:
           "GreenShift translated complex Earth-observation data into clear daily decisions for farmers — what to do, when, and why it matters.",
+        mainImage: greenshiftMap.url,
+        secondaryImage: greenshiftDashboard.url,
+        downloadUrl: greenshiftPresentation.url,
+        downloadLabel: "Download Presentation (PDF)",
+        liveUrl: "https://green-shift.vercel.app/login?redirect_url=https%3A%2F%2Fgreen-shift.vercel.app%2F",
+        liveLabel: "Visit Website",
       },
       {
         slug: "murjan",
