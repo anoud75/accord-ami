@@ -6,6 +6,7 @@ import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
 import { achievements, fields, skillsStrip, roles } from "@/content/home";
 import portrait from "@/assets/alanoud-portrait.jpg.asset.json";
 import cv from "@/assets/cv.asset.json";
+import trophy from "@/assets/trophy.png.asset.json";
 
 const HomePage = () => (
   <PageShell>
