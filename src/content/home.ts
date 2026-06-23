@@ -30,6 +30,7 @@ export interface ProjectBlock {
   downloadUrl?: string;
   downloadLabel?: string;
   blurImages?: boolean;
+  mainImageContain?: boolean;
 }
 
 export interface MethodologyStep {
