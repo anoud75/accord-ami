@@ -74,9 +74,9 @@ const HomePage = () => (
           </Reveal>
         </div>
 
-        <div className="md:col-span-5 order-1">
+        <div className="md:col-span-6 order-1">
           <Reveal delay={0.1}>
-            <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-md overflow-hidden bg-ivory-deep border border-foreground/10">
+            <div className="relative aspect-[4/5] w-full rounded-md overflow-hidden bg-ivory-deep border border-foreground/10">
               <img
                 src={portrait.url}
                 alt="Portrait of Alanoud Alsamil"
