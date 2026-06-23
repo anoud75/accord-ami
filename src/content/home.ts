@@ -14,6 +14,7 @@ import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
 import sleepMou from "@/assets/sleep-mou.png.asset.json";
 import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
 import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
+import sleepExhibition from "@/assets/sleep-exhibition.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -204,6 +205,9 @@ export const fields: Field[] = [
           "2,000+ visitors · 45+ artworks · 6 workshops · 10+ partners and sponsors",
         readMore:
           "This work used visual storytelling and experience design to make sleep disorders more understandable for patients, students, healthcare professionals, and the public.",
+        mainImage: sleepExhibition.url,
+        downloadUrl: "https://www.dropbox.com/scl/fi/569acpcqotas3th1tew29/Strategic-partenership-proposal-updated.pdf?rlkey=flwggs13v5uiyx0t3hmdrctxz&st=9krgfgfn&dl=0",
+        downloadLabel: "View Strategic Partnership Proposal (PDF)",
       },
     ],
   },
