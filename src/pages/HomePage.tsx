@@ -18,7 +18,7 @@ const HomePage = () => (
     {/* 1. ABOUT */}
     <section id="about" className="pt-20 md:pt-28 pb-24 md:pb-28 scroll-mt-20">
       <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-        <div className="md:col-span-7 order-2">
+        <div className="md:col-span-6 order-2 md:pt-2">
           <Reveal>
             <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
           </Reveal>
