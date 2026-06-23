@@ -22,6 +22,8 @@ import greenshiftPresentation from "@/assets/greenshift-presentation.pdf.asset.j
 import murjanMap from "@/assets/murjan-map.png.asset.json";
 import murjanDashboard from "@/assets/murjan-dashboard.png.asset.json";
 import muqlaScreens from "@/assets/muqla-screens.png.asset.json";
+import smartringHero from "@/assets/smartring-hero.png.asset.json";
+import smartringScreens from "@/assets/smartring-screens.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -360,6 +362,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "The smart-ring concept reframed assistive technology as something quiet, wearable, and integrated into daily life rather than a visible device.",
+        mainImage: smartringHero.url,
+        secondaryImage: smartringScreens.url,
+        mainImageContain: true,
       },
       {
         slug: "sign-translate",
