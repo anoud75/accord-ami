@@ -26,6 +26,8 @@ import smartringHero from "@/assets/smartring-hero.png.asset.json";
 import smartringScreens from "@/assets/smartring-screens.png.asset.json";
 import masmoaHero from "@/assets/masmoa-hero.png.asset.json";
 import masmoaCards from "@/assets/masmoa-cards.png.asset.json";
+import signtranslateHero from "@/assets/signtranslate-hero.jpg.asset.json";
+import signtranslateFeatures from "@/assets/signtranslate-features.jpg.asset.json";
 
 
 export interface ProjectBlock {
@@ -386,6 +388,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "Sign Translate explored how AI could support two-way conversation between sign and spoken language, with a focus on Saudi Sign Language and real-world use.",
+        mainImage: signtranslateHero.url,
+        secondaryImage: signtranslateFeatures.url,
+        mainImageContain: true,
       },
       {
         slug: "muqla",
