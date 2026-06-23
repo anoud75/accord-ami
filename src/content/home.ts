@@ -10,6 +10,8 @@ import yamamahPharmacyMedical from "@/assets/yamamah-pharmacy-medical.png.asset.
 import yamamahPharmacyCareflow from "@/assets/yamamah-pharmacy-careflow.png.asset.json";
 import hhcPathways from "@/assets/hhc-pathways.png.asset.json";
 import hhcProtocol from "@/assets/hhc-protocol.png.asset.json";
+import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
+import sleepMou from "@/assets/sleep-mou.png.asset.json";
 
 
 export interface ProjectBlock {
