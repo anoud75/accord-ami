@@ -28,7 +28,7 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             <img
               src={p.mainImage}
               alt={p.title}
-              className={`w-full aspect-[16/10] rounded-md border border-foreground/10 object-cover bg-ivory-deep ${p.blurImages ? "blur-[3px]" : ""}`}
+              className={`w-full rounded-md border border-foreground/10 bg-ivory-deep ${p.mainImageContain ? "h-auto object-contain" : "aspect-[16/10] object-cover"} ${p.blurImages ? "blur-[3px]" : ""}`}
             />
           ) : (
             <ImagePlaceholder aspect="aspect-[16/10]" label="Main image" />
