@@ -23,10 +23,10 @@ const HomePage = () => (
             <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="display-1 mt-6">Hi, I'm Alanoud.</h1>
+            <h1 className="font-display font-semibold tracking-[-0.035em] mt-6 text-[2rem] md:text-[2.75rem] leading-[1.05]">Hi, I'm Alanoud.</h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="lede mt-8 space-y-5 max-w-2xl">
+            <div className="mt-6 space-y-4 max-w-2xl text-sm md:text-base leading-relaxed text-foreground/70">
               <p>
                 I work across product management, business analysis, UX/UI, and AI product strategy.
               </p>
