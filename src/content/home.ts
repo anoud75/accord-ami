@@ -24,6 +24,8 @@ import murjanDashboard from "@/assets/murjan-dashboard.png.asset.json";
 import muqlaScreens from "@/assets/muqla-screens.png.asset.json";
 import smartringHero from "@/assets/smartring-hero.png.asset.json";
 import smartringScreens from "@/assets/smartring-screens.png.asset.json";
+import masmoaHero from "@/assets/masmoa-hero.png.asset.json";
+import masmoaCards from "@/assets/masmoa-cards.png.asset.json";
 
 
 export interface ProjectBlock {
