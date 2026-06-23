@@ -291,6 +291,12 @@ export const fields: Field[] = [
         ],
         readMore:
           "GreenShift translated complex Earth-observation data into clear daily decisions for farmers — what to do, when, and why it matters.",
+        mainImage: greenshiftMap.url,
+        secondaryImage: greenshiftDashboard.url,
+        downloadUrl: greenshiftPresentation.url,
+        downloadLabel: "Download Presentation (PDF)",
+        liveUrl: "https://green-shift.vercel.app/login?redirect_url=https%3A%2F%2Fgreen-shift.vercel.app%2F",
+        liveLabel: "Visit Website",
       },
       {
         slug: "murjan",
