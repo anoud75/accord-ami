@@ -170,6 +170,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "I led the product definition and experience design of AI healthcare solutions, including what the AI should do, how users should interact with it, and what technical teams needed to build it clearly.",
+        mainImage: healthcareAiChatbot.url,
+        mainImageContain: true,
+        blurImages: true,
       },
       {
         slug: "sleep-report-ai",
