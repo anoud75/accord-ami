@@ -12,6 +12,8 @@ import hhcPathways from "@/assets/hhc-pathways.png.asset.json";
 import hhcProtocol from "@/assets/hhc-protocol.png.asset.json";
 import sleepObservatory from "@/assets/sleep-observatory.png.asset.json";
 import sleepMou from "@/assets/sleep-mou.png.asset.json";
+import sleepReportHero from "@/assets/sleep-report-hero.png.asset.json";
+import sleepReportDashboard from "@/assets/sleep-report-dashboard.png.asset.json";
 
 
 export interface ProjectBlock {
@@ -181,6 +183,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "The product was designed around a simple goal: reduce reporting burden while making sleep-study results easier for patients to understand without losing clinical context.",
+        mainImage: sleepReportHero.url,
+        secondaryImage: sleepReportDashboard.url,
       },
       {
         slug: "sleep-experience",
