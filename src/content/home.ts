@@ -362,6 +362,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "The smart-ring concept reframed assistive technology as something quiet, wearable, and integrated into daily life rather than a visible device.",
+        mainImage: smartringHero.url,
+        secondaryImage: smartringScreens.url,
+        mainImageContain: true,
       },
       {
         slug: "sign-translate",
