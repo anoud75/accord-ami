@@ -19,9 +19,6 @@ const HomePage = () => (
     <section id="about" className="pt-20 md:pt-28 pb-24 md:pb-28 scroll-mt-20">
       <div className="container-edit grid md:grid-cols-12 gap-10 md:gap-16 items-start">
         <div className="md:col-span-6 order-2 md:pt-2">
-          <Reveal>
-            <Eyebrow>Product · Business Analysis · UX/UI · AI Product Strategy</Eyebrow>
-          </Reveal>
           <Reveal delay={0.05}>
             <h1 className="display-1 mt-6 whitespace-nowrap">Hi, I'm Alanoud.</h1>
           </Reveal>
