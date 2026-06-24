@@ -70,15 +70,15 @@ export const fields: Field[] = [
     methodology: [
       {
         title: "Ubiquitous Language",
-        line: "One precise definition for terms like Care Gap, Care Task, and Coordination Batch — shared across clinical, product, data, and engineering.",
+        line: "One precise definition for terms like Patient, Encounter, Care Gap, and Risk Score — shared across clinical, product, data, and engineering.",
       },
       {
         title: "Bounded Contexts",
-        line: "Splitting the platform into Population Health, Care Coordination, Patient Engagement, and Reporting — clear ownership, no leaking logic.",
+        line: "Splitting the platform into clear healthcare domains — Population Health, Clinical Workflows, Patient Engagement, and Reporting — with clean ownership and no leaking logic.",
       },
       {
         title: "Design for the Mainstream",
-        line: "Built for the pragmatic majority — nurses, coordinators, PHC and BHC teams — not the tech-friendly innovators who tolerate gaps.",
+        line: "Built for the pragmatic majority — nurses, physicians, pharmacists, and primary-care teams — not the tech-friendly innovators who tolerate gaps.",
       },
       {
         title: "Operational UX Metrics",
