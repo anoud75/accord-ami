@@ -42,6 +42,11 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
           ) : (
             !p.mainImage && <ImagePlaceholder aspect="aspect-[16/10]" label="Optional image" />
           )}
+          {p.blurImages && (p.mainImage || p.secondaryImage) && (
+            <p className="text-[11px] italic text-foreground/55 leading-relaxed">
+              Image blurred for data privacy.
+            </p>
+          )}
         </div>
 
         <div className={`md:col-span-6 ${reversed ? "md:order-1" : ""}`}>
