@@ -500,7 +500,8 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_retro_member: { Args: { _retro_id: string }; Returns: boolean }
+      shares_retro_with: { Args: { _other_user: string }; Returns: boolean }
     }
     Enums: {
       action_item_status: "open" | "done"
