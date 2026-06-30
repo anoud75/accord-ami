@@ -170,6 +170,7 @@ const HomePage = () => (
               href={cv.url}
               target="_blank"
               rel="noopener noreferrer"
+              download="Alanoud_Alsamil_CV_2026.pdf"
               className="inline-flex items-center gap-2 bg-foreground text-ivory px-5 py-2.5 text-sm rounded-md hover:bg-foreground/85 transition-colors"
             >
               <Download className="w-4 h-4" /> Download CV
