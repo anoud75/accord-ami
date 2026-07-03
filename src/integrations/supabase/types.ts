@@ -497,11 +497,24 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      my_profile_email: {
+        Row: {
+          email: string | null
+          id: string | null
+        }
+        Insert: {
+          email?: string | null
+          id?: string | null
+        }
+        Update: {
+          email?: string | null
+          id?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
-      is_retro_member: { Args: { _retro_id: string }; Returns: boolean }
-      shares_retro_with: { Args: { _other_user: string }; Returns: boolean }
+      [_ in never]: never
     }
     Enums: {
       action_item_status: "open" | "done"
