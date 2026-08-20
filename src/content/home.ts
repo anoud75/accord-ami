@@ -28,6 +28,7 @@ import masmoaHero from "@/assets/masmoa-hero.png.asset.json";
 import masmoaCards from "@/assets/masmoa-cards.png.asset.json";
 import signtranslateHero from "@/assets/signtranslate-hero.jpg.asset.json";
 import signtranslateFeatures from "@/assets/signtranslate-features.jpg.asset.json";
+import { hostedAssetUrl, publicAssetUrl } from "@/lib/assets";
 
 
 export interface ProjectBlock {
@@ -104,8 +105,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "I worked across Yamamah Population Health as one connected product, not separate features. My work moved from strategy and product logic into workflows, dashboards, care coordination, AI behaviour, UX/UI, and the portfolio used to communicate the product to global clients.",
-        mainImage: yamamahDemographics.url,
-        secondaryImage: yamamahScreening.url,
+        mainImage: hostedAssetUrl(yamamahDemographics),
+        secondaryImage: hostedAssetUrl(yamamahScreening),
         blurImages: true,
       },
       {
@@ -124,8 +125,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "This was not only a UI project. I worked from stakeholder needs through product scope, pharmacy workflows, business rules, user experience, and build-ready documentation.",
-        mainImage: yamamahPharmacyCareflow.url,
-        secondaryImage: yamamahPharmacyMedical.url,
+        mainImage: hostedAssetUrl(yamamahPharmacyCareflow),
+        secondaryImage: hostedAssetUrl(yamamahPharmacyMedical),
         blurImages: true,
       },
       {
@@ -145,8 +146,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "The focus was making care coordination practical at scale: less manual work, clearer ownership, and better visibility over tasks, open gaps, and follow-up.",
-        mainImage: hhcPathways.url,
-        secondaryImage: hhcProtocol.url,
+        mainImage: hostedAssetUrl(hhcPathways),
+        secondaryImage: hostedAssetUrl(hhcProtocol),
         blurImages: true,
       },
       {
@@ -166,8 +167,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "This work focused on turning sleep health from a broad topic into a clear strategic story with practical priorities, service insights, and a stronger visual language.",
-        mainImage: sleepObservatory.url,
-        secondaryImage: sleepMou.url,
+        mainImage: hostedAssetUrl(sleepObservatory),
+        secondaryImage: hostedAssetUrl(sleepMou),
       },
       {
         slug: "healthcare-ai",
@@ -185,7 +186,7 @@ export const fields: Field[] = [
         ],
         readMore:
           "I led the product definition and experience design of AI healthcare solutions, including what the AI should do, how users should interact with it, and what technical teams needed to build it clearly.",
-        mainImage: healthcareAiChatbot.url,
+        mainImage: hostedAssetUrl(healthcareAiChatbot),
         mainImageContain: true,
         blurImages: true,
       },
@@ -204,8 +205,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "The product was designed around a simple goal: reduce reporting burden while making sleep-study results easier for patients to understand without losing clinical context.",
-        mainImage: sleepReportHero.url,
-        secondaryImage: sleepReportDashboard.url,
+        mainImage: hostedAssetUrl(sleepReportHero),
+        secondaryImage: hostedAssetUrl(sleepReportDashboard),
       },
       {
         slug: "sleep-experience",
@@ -225,7 +226,7 @@ export const fields: Field[] = [
           "2,000+ visitors · 45+ artworks · 6 workshops · 10+ partners and sponsors",
         readMore:
           "This work used visual storytelling and experience design to make sleep disorders more understandable for patients, students, healthcare professionals, and the public.",
-        mainImage: sleepExhibition.url,
+        mainImage: hostedAssetUrl(sleepExhibition),
         mainImageContain: true,
         downloadUrl: "https://www.dropbox.com/scl/fi/569acpcqotas3th1tew29/Strategic-partenership-proposal-updated.pdf?rlkey=flwggs13v5uiyx0t3hmdrctxz&st=9krgfgfn&dl=0",
         downloadLabel: "View Strategic Partnership Proposal (PDF)",
@@ -254,8 +255,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "The concept positions Drahim as the financial-intelligence layer inside Barq: Barq retains the customer relationship and branded experience, while Drahim provides the PFM capabilities behind it. The project combines product framing, interface concepts, commercial packaging, and an implementation path designed to accelerate time to market.",
-        mainImage: "/portfolio/drahim-pfm-barq-cover.png",
-        downloadUrl: "/portfolio/drahim-pfm-barq.pdf",
+        mainImage: publicAssetUrl("portfolio/drahim-pfm-barq-cover.png"),
+        downloadUrl: publicAssetUrl("portfolio/drahim-pfm-barq.pdf"),
         downloadLabel: "Download Project Presentation (PDF)",
       },
       {
@@ -273,9 +274,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "Barq explored how a digital wallet could feel calmer and more confident in daily use — reducing friction in navigation, transactions, and account management.",
-        mainImage: barqCover.url,
-        secondaryImage: barqAbTest.url,
-        downloadUrl: barqIntro.url,
+        mainImage: hostedAssetUrl(barqCover),
+        secondaryImage: hostedAssetUrl(barqAbTest),
+        downloadUrl: hostedAssetUrl(barqIntro),
         downloadLabel: "Download Case Study (PDF)",
       },
       {
@@ -294,8 +295,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "Mirsad framed fraud prevention as a calm, informative moment in the user's journey — designed to slow risky decisions without blocking trusted ones.",
-        mainImage: mirsadCover.url,
-        downloadUrl: mirsadPdf.url,
+        mainImage: hostedAssetUrl(mirsadCover),
+        downloadUrl: hostedAssetUrl(mirsadPdf),
         downloadLabel: "Download Case Study (PDF)",
       },
     ],
@@ -321,9 +322,9 @@ export const fields: Field[] = [
         ],
         readMore:
           "GreenShift translated complex Earth-observation data into clear daily decisions for farmers — what to do, when, and why it matters.",
-        mainImage: greenshiftMap.url,
-        secondaryImage: greenshiftDashboard.url,
-        downloadUrl: greenshiftPresentation.url,
+        mainImage: hostedAssetUrl(greenshiftMap),
+        secondaryImage: hostedAssetUrl(greenshiftDashboard),
+        downloadUrl: hostedAssetUrl(greenshiftPresentation),
         downloadLabel: "Download Presentation (PDF)",
         liveUrl: "https://green-shift.vercel.app/login?redirect_url=https%3A%2F%2Fgreen-shift.vercel.app%2F",
         liveLabel: "Visit Website",
@@ -344,8 +345,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "Murjan focused on giving marine teams a clear operational picture of the reef — node health, environmental signals, and the alerts that need a response.",
-        mainImage: murjanDashboard.url,
-        secondaryImage: murjanMap.url,
+        mainImage: hostedAssetUrl(murjanDashboard),
+        secondaryImage: hostedAssetUrl(murjanMap),
         liveUrl: "https://murjan.app/",
         liveLabel: "Visit Website",
       },
@@ -371,8 +372,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "Masmoa makes communication easier by letting users build and organise their own visual cards — quick, tactile access to the words and requests they use most.",
-        mainImage: masmoaHero.url,
-        secondaryImage: masmoaCards.url,
+        mainImage: hostedAssetUrl(masmoaHero),
+        secondaryImage: hostedAssetUrl(masmoaCards),
         mainImageContain: true,
       },
       {
@@ -390,8 +391,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "The smart-ring concept reframed assistive technology as something quiet, wearable, and integrated into daily life rather than a visible device.",
-        mainImage: smartringHero.url,
-        secondaryImage: smartringScreens.url,
+        mainImage: hostedAssetUrl(smartringHero),
+        secondaryImage: hostedAssetUrl(smartringScreens),
         mainImageContain: true,
       },
       {
@@ -409,8 +410,8 @@ export const fields: Field[] = [
         ],
         readMore:
           "Sign Translate explored how AI could support two-way conversation between sign and spoken language, with a focus on Saudi Sign Language and real-world use.",
-        mainImage: signtranslateHero.url,
-        secondaryImage: signtranslateFeatures.url,
+        mainImage: hostedAssetUrl(signtranslateHero),
+        secondaryImage: hostedAssetUrl(signtranslateFeatures),
         mainImageContain: true,
       },
       {
@@ -427,7 +428,7 @@ export const fields: Field[] = [
         ],
         readMore:
           "Muqla used voice as the primary interface, letting visually impaired users shape stories together without depending on visual UI.",
-        mainImage: muqlaScreens.url,
+        mainImage: hostedAssetUrl(muqlaScreens),
         mainImageContain: true,
       },
     ],

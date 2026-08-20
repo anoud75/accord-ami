@@ -7,6 +7,7 @@ import { achievements, fields, skillsStrip, roles } from "@/content/home";
 import portrait from "@/assets/alanoud-portrait.jpg.asset.json";
 import cv from "@/assets/cv.asset.json";
 import trophy from "@/assets/trophy.png.asset.json";
+import { hostedAssetUrl } from "@/lib/assets";
 
 const HomePage = () => (
   <PageShell>
@@ -75,7 +76,7 @@ const HomePage = () => (
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] w-full rounded-md overflow-hidden bg-ivory-deep border border-foreground/10">
               <img
-                src={portrait.url}
+                src={hostedAssetUrl(portrait)}
                 alt="Portrait of Alanoud Alsamil"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -138,7 +139,7 @@ const HomePage = () => (
             <Reveal key={a.title} delay={Math.min(i, 5) * 0.04}>
               <div className="h-full bg-ivory border border-foreground/15 rounded-md p-6">
                 <img
-                  src={trophy.url}
+                  src={hostedAssetUrl(trophy)}
                   alt=""
                   aria-hidden="true"
                   className="w-10 h-10 mb-4 object-contain"
@@ -167,7 +168,7 @@ const HomePage = () => (
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
-              href={cv.url}
+              href={hostedAssetUrl(cv)}
               target="_blank"
               rel="noopener noreferrer"
               download="Alanoud_Alsamil_CV_2026.pdf"

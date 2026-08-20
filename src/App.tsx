@@ -30,7 +30,7 @@ const App = () => (
     <ErrorBoundary>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <HashScroller />
         <Routes>
