@@ -239,6 +239,26 @@ export const fields: Field[] = [
       "My fintech work focuses on making financial products easier to understand, safer to use, and more practical in everyday decisions.",
     projects: [
       {
+        slug: "drahim-pfm-barq",
+        title: "Drahim PFM × Barq — The Intelligence Layer",
+        summary:
+          "A fintech solution concept showing how Drahim's white-label personal finance engine could be embedded within Barq to turn everyday transactions into categorised spending, useful insights, budgets, and savings goals.",
+        role:
+          "Solution Design · Product Strategy · UX/UI · Commercial Storytelling",
+        ledBullets: [
+          "Embedded PFM experience aligned with Barq's wallet ecosystem",
+          "Product narrative connecting transaction data to insights, goals, and return engagement",
+          "Clear split between Barq's customer experience and Drahim's intelligence engine",
+          "Illustrative commercial model, pilot metrics, and phased implementation roadmap",
+          "Executive pitch storytelling and presentation design",
+        ],
+        readMore:
+          "The concept positions Drahim as the financial-intelligence layer inside Barq: Barq retains the customer relationship and branded experience, while Drahim provides the PFM capabilities behind it. The project combines product framing, interface concepts, commercial packaging, and an implementation path designed to accelerate time to market.",
+        mainImage: "/portfolio/drahim-pfm-barq-cover.png",
+        downloadUrl: "/portfolio/drahim-pfm-barq.pdf",
+        downloadLabel: "Download Project Presentation (PDF)",
+      },
+      {
         slug: "barq",
         title: "Barq — Digital Wallet UX Case Study",
         summary:
