@@ -1,13 +1,10 @@
 type LovableAsset = {
+  original_filename: string;
   url: string;
-};
-
-const LOVABLE_ASSET_ORIGIN = "https://alanoudalsamil.pro";
-
-export const hostedAssetUrl = ({ url }: LovableAsset) => {
-  if (/^https?:\/\//.test(url)) return url;
-  return new URL(url, LOVABLE_ASSET_ORIGIN).href;
 };
 
 export const publicAssetUrl = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
+export const hostedAssetUrl = ({ original_filename }: LovableAsset) =>
+  publicAssetUrl(`portfolio/assets/${encodeURIComponent(original_filename)}`);
