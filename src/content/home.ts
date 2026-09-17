@@ -440,7 +440,33 @@ export const fields: Field[] = [
 
 export const getField = (slug: string) => fields.find((f) => f.slug === slug);
 
-export const selectedProjects: ProjectBlock[] = [];
+export const selectedProjects: ProjectBlock[] = [
+  {
+    slug: "skratchly",
+    title: "Skratchly — Location-Based Social Memory App",
+    summary:
+      "Skratchly turns real-world exploration into a personal scratch map — a living journal tied to movement. Every place a user physically visits unlocks a digital wall where memories can be left, and those memories are only viewable when someone returns to that exact spot.",
+    role: "Product Concept · UX/UI · Business Model",
+    ledBullets: [
+      "Defined the core product idea: places fade, memories don't — memory is unlocked by physical presence, not by feed scrolling.",
+      "Designed the automatic scratch map that reveals itself as users move through real-world locations.",
+      "Designed the Digital Walls mechanic — a location-bound memory wall visible only on physical check-in.",
+      "Built the experience-based rewards model: coupons and offers from partner cafés unlocked through real visits.",
+      "Produced the full brand identity, pitch deck, launch banner, and demo video used in the public pitch.",
+    ],
+    readMore:
+      "Skratchly reframes social media around place instead of timeline. Instead of broadcasting content everywhere, users leave notes, photos, and memories anchored to a physical location — the digital version of a café sticky-note wall, but personal. The social value comes from returning: a memory left at a location can only be read by standing there again, which creates a genuine reason to revisit places and to explore new ones. The business layer sits naturally on top of this behaviour — cafés and venues become partners, rewarding real foot traffic with offers unlocked through verified visits, so the product creates measurable value for local businesses instead of relying only on advertising. The concept was pitched publicly in May 2025 with a working prototype, brand system, and go-to-market model.",
+    factsLine: "Pitched May 2025 · Prototype + brand system + partner rewards model",
+    mainImage: hostedAssetUrl(skratchlyHero),
+    mainImageContain: true,
+    secondaryImage: hostedAssetUrl(skratchlyPitch),
+    videoUrl: skratchlyDemo.url,
+    downloadUrl: hostedAssetUrl(skratchlyPdf),
+    downloadLabel: "Download Deck",
+    secondDownloadUrl: hostedAssetUrl(skratchlyBanner),
+    secondDownloadLabel: "Download Banner",
+  },
+];
 
 export const achievements: {
   title: string;
