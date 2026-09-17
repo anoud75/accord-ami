@@ -437,6 +437,8 @@ export const fields: Field[] = [
 
 export const getField = (slug: string) => fields.find((f) => f.slug === slug);
 
+export const selectedProjects: ProjectBlock[] = [];
+
 export const achievements: {
   title: string;
   organisation: string;

@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { Download, Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
+import ProjectCard from "@/components/portfolio/ProjectCard";
 import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
-import { achievements, fields, skillsStrip, roles } from "@/content/home";
+import { achievements, fields, selectedProjects, skillsStrip, roles } from "@/content/home";
 import portrait from "@/assets/alanoud-portrait.jpg.asset.json";
 import cv from "@/assets/cv.asset.json";
 import trophy from "@/assets/trophy.png.asset.json";
@@ -122,7 +123,26 @@ const HomePage = () => (
       </div>
     </section>
 
-    {/* 3. ACHIEVEMENTS */}
+    {/* 3. SELECTED PROJECTS */}
+    <section id="selected" className="border-t border-foreground/10 scroll-mt-20">
+      <div className="container-edit py-20 md:py-24">
+        <Reveal>
+          <Eyebrow>Selected Projects</Eyebrow>
+          <h2 className="display-2 mt-4 max-w-3xl">Cross-sector work that doesn't fit one box.</h2>
+          <p className="lede max-w-3xl mt-6">
+            Smaller or standalone projects, experiments, and concepts that sit across multiple disciplines.
+          </p>
+        </Reveal>
+
+        <section className="mt-12">
+          {selectedProjects.map((p, i) => (
+            <ProjectCard key={p.slug} p={p} index={i} />
+          ))}
+        </section>
+      </div>
+    </section>
+
+    {/* 4. ACHIEVEMENTS */}
     <section
       id="achievements"
       className="border-t border-foreground/10 bg-ivory-deep/40 scroll-mt-20"

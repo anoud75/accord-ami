@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const sections = [
   { id: "about", label: "About" },
   { id: "work", label: "Work" },
+  { id: "selected", label: "Selected" },
   { id: "achievements", label: "Achievements" },
   { id: "contact", label: "CV & Links" },
 ];
