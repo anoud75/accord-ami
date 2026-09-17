@@ -38,6 +38,15 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
           ) : (
             !p.mainImage && <ImagePlaceholder aspect="aspect-[16/10]" label="Optional image" />
           )}
+          {p.videoUrl && (
+            <video
+              src={p.videoUrl}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full rounded-md border border-foreground/10 bg-ivory-deep"
+            />
+          )}
           {p.blurImages && (p.mainImage || p.secondaryImage) && (
             <p className="text-[11px] italic text-foreground/55 leading-relaxed">
               Image blurred for data privacy.
@@ -84,6 +93,18 @@ const ProjectCard = ({ p, index }: { p: ProjectBlock; index: number }) => {
             >
               <Download className="w-4 h-4" />
               {p.downloadLabel ?? "Download"}
+            </a>
+          )}
+          {p.secondDownloadUrl && (
+            <a
+              href={p.secondDownloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="ml-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground bg-foreground/5 hover:bg-foreground/10 border border-foreground/15 rounded-md px-3 py-1.5 transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              {p.secondDownloadLabel ?? "Download"}
             </a>
           )}
           {p.liveUrl && (
