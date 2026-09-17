@@ -43,6 +43,9 @@ export interface ProjectBlock {
   secondaryImage?: string;
   downloadUrl?: string;
   downloadLabel?: string;
+  videoUrl?: string;
+  secondDownloadUrl?: string;
+  secondDownloadLabel?: string;
   blurImages?: boolean;
   mainImageContain?: boolean;
   liveUrl?: string;
