@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronDown, Download, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import PageShell from "@/components/portfolio/PageShell";
 import SEO from "@/components/portfolio/SEO";
+import ProjectCard from "@/components/portfolio/ProjectCard";
 import { Eyebrow, Reveal } from "@/components/portfolio/atoms";
-import { getField, type ProjectBlock, type MethodologyStep } from "@/content/home";
+import { getField, type MethodologyStep } from "@/content/home";
 import NotFound from "./NotFound";
 
 const ImagePlaceholder = ({ aspect = "aspect-[4/3]", label }: { aspect?: string; label: string }) => (
