@@ -28,6 +28,11 @@ import masmoaHero from "@/assets/masmoa-hero.png.asset.json";
 import masmoaCards from "@/assets/masmoa-cards.png.asset.json";
 import signtranslateHero from "@/assets/signtranslate-hero.jpg.asset.json";
 import signtranslateFeatures from "@/assets/signtranslate-features.jpg.asset.json";
+import skratchlyHero from "@/assets/skratchly-hero.png.asset.json";
+import skratchlyPitch from "@/assets/skratchly-pitch.jpg.asset.json";
+import skratchlyBanner from "@/assets/skratchly-banner.png.asset.json";
+import skratchlyPdf from "@/assets/skratchly.pdf.asset.json";
+import skratchlyDemo from "@/assets/skratchly-demo.mp4.asset.json";
 import { hostedAssetUrl, publicAssetUrl } from "@/lib/assets";
 
 
